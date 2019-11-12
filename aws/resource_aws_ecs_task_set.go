@@ -7,8 +7,8 @@ import (
 
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/service/ecs"
-	"github.com/hashicorp/terraform/helper/schema"
-	"github.com/hashicorp/terraform/helper/validation"
+	"github.com/hashicorp/terraform-plugin-sdk/helper/schema"
+	"github.com/hashicorp/terraform-plugin-sdk/helper/validation"
 )
 
 func resourceAwsEcsTaskSet() *schema.Resource {
@@ -310,7 +310,7 @@ func resourceAwsEcsTaskSetRead(d *schema.ResourceData, meta interface{}) error {
 }
 
 func resourceAwsEcsTaskSetUpdate(d *schema.ResourceData, meta interface{}) error {
-	conn := meta.(*AWSClient).ecsconn
+	//conn := meta.(*AWSClient).ecsconn
 	return resourceAwsEcsTaskSetRead(d, meta)
 }
 
